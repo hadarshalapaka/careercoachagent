@@ -3,6 +3,9 @@ from langgraph.graph import StateGraph, START, END
 from typing_extensions import TypedDict
 from langchain_google_genai import ChatGoogleGenerativeAI
 
+if "GOOGLE_API_KEY" not in os.environ:
+    os.environ["GOOGLE_API_KEY"] = "AIzaSyDk_MLrdfkkqq_L50tWGFaztZmyuE7AG_k"
+
 llm = ChatGoogleGenerativeAI(
     model="gemini-2.0-flash-001",
     temperature=0,
