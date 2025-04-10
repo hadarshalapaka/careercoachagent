@@ -2,6 +2,7 @@ from langchain_core.messages import HumanMessage, SystemMessage
 from langgraph.graph import StateGraph, START, END
 from typing_extensions import TypedDict
 from langchain_google_genai import ChatGoogleGenerativeAI
+import os
 
 if "GOOGLE_API_KEY" not in os.environ:
     os.environ["GOOGLE_API_KEY"] = "AIzaSyDk_MLrdfkkqq_L50tWGFaztZmyuE7AG_k"
