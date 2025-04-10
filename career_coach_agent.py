@@ -3,9 +3,10 @@ from langgraph.graph import StateGraph, START, END
 from typing_extensions import TypedDict
 from langchain_google_genai import ChatGoogleGenerativeAI
 import os
+import streamlit as st
 
 if "GOOGLE_API_KEY" not in os.environ:
-    os.environ["GOOGLE_API_KEY"] = HADARSH_GEMINI_API_KEY
+    os.environ["GOOGLE_API_KEY"] = st.secrets["HADARSH_GEMINI_API_KEY"]
 
 llm = ChatGoogleGenerativeAI(
     model="gemini-2.0-flash-001",
