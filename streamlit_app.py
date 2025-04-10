@@ -4,7 +4,7 @@ import career_coach_agent
 st.set_page_config(layout="wide")
 
 if "GOOGLE_API_KEY" not in os.environ:
-    os.environ["GOOGLE_API_KEY"] = st.secrets["HADARSH_GEMINI_API_KEY"]
+    os.environ["GOOGLE_API_KEY"] = "AIzaSyDk_MLrdfkkqq_L50tWGFaztZmyuE7AG_k"
 
 st.markdown("""
     <style>
